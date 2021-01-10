@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.rapicredit'
+version '1.0.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.933'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.933'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
